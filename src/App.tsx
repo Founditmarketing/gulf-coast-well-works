@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import WellServices from './pages/WellServices';
 import WaterFiltration from './pages/WaterFiltration';
 import PumpSystems from './pages/PumpSystems';
+import Emergency from './pages/Emergency';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="services/well-services" element={<WellServices />} />
           <Route path="services/water-filtration" element={<WaterFiltration />} />
           <Route path="services/pump-systems" element={<PumpSystems />} />
+          <Route path="emergency" element={<Emergency />} />
         </Route>
       </Routes>
     </Router>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Phone, Menu, X, ChevronDown, Droplets, Filter, Wrench } from 'lucide-react';
+import { Phone, Menu, X, ChevronDown, Droplets, Filter, Wrench, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -17,15 +17,14 @@ export function Header() {
     { title: "Well Services", href: "/services/well-services", icon: <Droplets className="w-4 h-4 mr-2" /> },
     { title: "Water Filtration", href: "/services/water-filtration", icon: <Filter className="w-4 h-4 mr-2" /> },
     { title: "Pump Systems", href: "/services/pump-systems", icon: <Wrench className="w-4 h-4 mr-2" /> },
+    { title: "Emergency Service", href: "/emergency", icon: <AlertTriangle className="w-4 h-4 mr-2 text-red-500" /> },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
-            GC
-          </div>
+          <img src="/gc logo.jpg" alt="Gulf Coast Well Works Logo" className="h-10 mix-blend-multiply" />
           <div className="flex flex-col">
             <span className="font-heading font-bold text-brand-primary leading-tight text-lg uppercase">Gulf Coast</span>
             <span className="font-heading font-medium text-brand-bg leading-tight text-sm tracking-widest uppercase">Well Works</span>
@@ -59,8 +58,8 @@ export function Header() {
               <Phone className="w-4 h-4" />
               228-265-2019
             </a>
-            <Button className="bg-brand-secondary hover:bg-brand-secondary/90 text-white font-bold shadow-lg shadow-brand-secondary/20">
-              Emergency Service
+            <Button asChild className="bg-brand-secondary hover:bg-brand-secondary/90 text-white font-bold shadow-lg shadow-brand-secondary/20">
+              <Link to="/emergency">Emergency Service</Link>
             </Button>
           </div>
         </nav>
@@ -101,8 +100,8 @@ export function Header() {
             <Phone className="w-5 h-5" />
             228-265-2019
           </a>
-          <Button className="bg-brand-secondary hover:bg-brand-secondary/90 text-white font-bold w-full">
-            Emergency Service
+          <Button asChild className="bg-brand-secondary hover:bg-brand-secondary/90 text-white font-bold w-full">
+            <Link to="/emergency">Emergency Service</Link>
           </Button>
         </motion.div>
       )}

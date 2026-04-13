@@ -53,7 +53,7 @@ export default function Home() {
       <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-brand-bg text-white">
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
-            src="https://picsum.photos/seed/wellwater/1920/1080" 
+            src="/gc4.jpg"
             alt="Well Water Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -79,9 +79,11 @@ export default function Home() {
                 With 40 years of certified experience, we provide South Mississippi homeowners with dependable well services and preventative maintenance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-brand-secondary hover:bg-brand-secondary/90 text-white font-bold text-lg px-8 h-14 shadow-xl shadow-brand-secondary/20">
-                  Free Well Inspection
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                <Button asChild size="lg" className="bg-brand-secondary hover:bg-brand-secondary/90 text-white font-bold text-lg px-8 h-14 shadow-xl shadow-brand-secondary/20">
+                  <Link to="/contact">
+                    Free Well Inspection
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="bg-white border-white text-brand-bg hover:bg-brand-primary hover:text-white font-bold text-lg px-8 h-14 transition-all duration-300">
                   View Our Services
@@ -157,7 +159,7 @@ export default function Home() {
             <div className="lg:w-1/2 relative">
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://picsum.photos/seed/wellwork-team/800/1000" 
+                  src="/gc10.jpg"
                   alt="Professional Well Service Team" 
                   className="w-full aspect-[4/5] object-cover"
                   referrerPolicy="no-referrer"
@@ -209,10 +211,15 @@ export default function Home() {
               ))}
             </div>
             <h3 className="text-3xl font-bold font-heading text-brand-bg">What Our Neighbors Say</h3>
-            <p className="text-slate-500 mt-2">Rated 5.0 stars based on 150+ Google Reviews</p>
+            <p className="text-slate-500 mt-2 mb-6">Rated 5.0 stars based on 150+ Google Reviews</p>
+            <a href="https://www.google.com/maps/place/Gulf+Coast+Well+Works/@30.5614024,-90.5488516,8z/data=!3m1!4b1!4m6!3m5!1s0x6ef2dc12e66a96e3:0x865efcfa87e943e4!8m2!3d30.568055!4d-89.229412!16s%2Fg%2F11xsc25j2p?entry=ttu" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-white text-brand-bg hover:bg-slate-100 border border-slate-200 font-bold shadow-sm">
+                View All Reviews on Google
+              </Button>
+            </a>
           </div>
 
-          <div className="relative">
+          <div className="relative mt-8">
             <motion.div 
               className="flex gap-6"
               animate={{ x: [0, -1000] }}

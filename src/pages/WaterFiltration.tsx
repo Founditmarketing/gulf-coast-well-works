@@ -6,7 +6,7 @@ export default function WaterFiltration() {
       title="Water Filtration"
       subtitle="Advanced systems for safe, clean, and great-tasting water."
       description="Don't settle for anything less than pure water. Our advanced filtration solutions remove contaminants, minerals, and odors, ensuring your family has access to the highest quality water for drinking, cooking, and bathing."
-      image="https://picsum.photos/seed/waterfilter/800/800"
+      image="/gc2.jpg"
       features={[
         "Whole-House Filtration Systems",
         "Reverse Osmosis Installation",

@@ -29,8 +29,10 @@ export function ServicePageLayout({ title, subtitle, description, image, feature
             <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6">{title}</h1>
             <p className="text-xl text-slate-300 leading-relaxed mb-8">{subtitle}</p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-brand-secondary hover:bg-brand-secondary/90 text-white font-bold">
-                Get a Free Quote
+              <Button asChild size="lg" className="bg-brand-secondary hover:bg-brand-secondary/90 text-white font-bold">
+                <Link to="/contact">
+                  Get a Free Quote
+                </Link>
               </Button>
               <a href="tel:228-265-2019">
                 <Button size="lg" variant="outline" className="bg-white border-white text-brand-bg hover:bg-brand-primary hover:text-white font-bold transition-all duration-300">

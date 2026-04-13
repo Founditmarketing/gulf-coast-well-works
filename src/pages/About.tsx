@@ -50,7 +50,7 @@ export default function About() {
       <section className="bg-brand-bg text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img 
-            src="https://picsum.photos/seed/about-hero/1920/1080" 
+            src="/gc5.jpg"
             alt="About Us Hero" 
             className="w-full h-full object-cover" 
             referrerPolicy="no-referrer" 
@@ -101,7 +101,7 @@ export default function About() {
             </motion.div>
             <div className="relative">
               <img 
-                src="https://picsum.photos/seed/about-team/800/600" 
+                src="/gc staff.jpg"
                 alt="Our Team at Work" 
                 className="rounded-3xl shadow-2xl relative z-10"
                 referrerPolicy="no-referrer"

@@ -13,7 +13,7 @@ export default function Contact() {
       <section className="bg-brand-bg text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img 
-            src="https://picsum.photos/seed/contact-hero/1920/1080" 
+            src="/gc6.jpg"
             alt="Contact Us Hero" 
             className="w-full h-full object-cover" 
             referrerPolicy="no-referrer" 

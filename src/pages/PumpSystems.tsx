@@ -6,7 +6,7 @@ export default function PumpSystems() {
       title="Pump Systems"
       subtitle="High-efficiency pumps and pressure tanks for consistent water flow."
       description="A reliable pump is the heart of your well system. We install and repair high-performance pump systems that provide consistent pressure and efficient operation, tailored to the specific needs of your property."
-      image="https://picsum.photos/seed/waterpump/800/800"
+      image="/gc3.jpg"
       features={[
         "Submersible Pump Installation",
         "Jet Pump Repair & Service",
