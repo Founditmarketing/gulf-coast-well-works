@@ -42,9 +42,21 @@ export default function Home() {
   ];
 
   const trustPoints = [
-    { text: "Licensed & Certified", icon: <ShieldCheck className="w-5 h-5" /> },
-    { text: "24/7 Response", icon: <Clock className="w-5 h-5" /> },
-    { text: "Serving Gulfport & Lyman", icon: <MapPin className="w-5 h-5" /> }
+    {
+      text: "Licensed & Certified",
+      icon: <ShieldCheck className="w-6 h-6" />,
+      detail: "Fully licensed, bonded, and insured for residential well services in Mississippi."
+    },
+    {
+      text: "24/7 Emergency Response",
+      icon: <Clock className="w-6 h-6" />,
+      detail: "Water emergency? Our team is on call around the clock — nights, weekends, and holidays."
+    },
+    {
+      text: "Serving Gulfport & Lyman",
+      icon: <MapPin className="w-6 h-6" />,
+      detail: "Proudly serving South Mississippi homeowners for over 40 years."
+    }
   ];
 
   return (
@@ -82,11 +94,10 @@ export default function Home() {
                 <Button asChild size="lg" className="bg-brand-secondary hover:bg-brand-secondary/90 text-white font-bold text-lg px-8 h-14 shadow-xl shadow-brand-secondary/20">
                   <Link to="/contact">
                     Free Well Inspection
-                    <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white border-white text-brand-bg hover:bg-brand-primary hover:text-white font-bold text-lg px-8 h-14 transition-all duration-300">
-                  View Our Services
+                <Button asChild size="lg" variant="outline" className="bg-white border-white text-brand-bg hover:bg-brand-primary hover:text-white font-bold text-lg px-8 h-14 transition-all duration-300">
+                  <a href="#services">View Our Services</a>
                 </Button>
               </div>
             </motion.div>
@@ -95,15 +106,23 @@ export default function Home() {
       </section>
 
       {/* Trust Bar */}
-      <section className="bg-brand-primary py-8 text-white border-y border-white/10">
+      <section className="bg-brand-primary text-white border-y border-white/10">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center md:justify-between gap-8 items-center">
+          <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-white/10">
             {trustPoints.map((point, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <div className="bg-white/20 p-2 rounded-full">
-                  {point.icon}
+              <div
+                key={i}
+                className="group flex-1 flex flex-col items-center text-center px-8 py-6 cursor-default transition-all duration-300 hover:bg-white/10"
+              >
+                <div className="flex items-center gap-3 mb-0 group-hover:mb-2 transition-all duration-300">
+                  <div className="bg-white/20 p-2 rounded-full group-hover:bg-white/30 transition-colors duration-300">
+                    {point.icon}
+                  </div>
+                  <span className="font-bold text-lg tracking-tight">{point.text}</span>
                 </div>
-                <span className="font-semibold text-lg tracking-tight">{point.text}</span>
+                <p className="text-white/80 text-sm leading-relaxed max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-500 ease-in-out">
+                  {point.detail}
+                </p>
               </div>
             ))}
           </div>
@@ -211,10 +230,10 @@ export default function Home() {
               ))}
             </div>
             <h3 className="text-3xl font-bold font-heading text-brand-bg">What Our Neighbors Say</h3>
-            <p className="text-slate-500 mt-2 mb-6">Rated 5.0 stars based on 150+ Google Reviews</p>
+            <p className="text-slate-500 mt-2 mb-6">5-Star Rated on Google</p>
             <a href="https://www.google.com/maps/place/Gulf+Coast+Well+Works/@30.5614024,-90.5488516,8z/data=!3m1!4b1!4m6!3m5!1s0x6ef2dc12e66a96e3:0x865efcfa87e943e4!8m2!3d30.568055!4d-89.229412!16s%2Fg%2F11xsc25j2p?entry=ttu" target="_blank" rel="noopener noreferrer">
               <Button className="bg-white text-brand-bg hover:bg-slate-100 border border-slate-200 font-bold shadow-sm">
-                View All Reviews on Google
+                See All Reviews on Google
               </Button>
             </a>
           </div>
@@ -222,36 +241,39 @@ export default function Home() {
           <div className="relative mt-8">
             <motion.div 
               className="flex gap-6"
-              animate={{ x: [0, -1000] }}
+              animate={{ x: [0, -1500] }}
               transition={{ 
-                duration: 30, 
+                duration: 40, 
                 repeat: Infinity, 
                 ease: "linear" 
               }}
             >
               {[
-                { name: "Robert Miller", text: "Fastest service I've ever had. My pump died on a Sunday and they were here in 2 hours.", rating: 5 },
-                { name: "Sarah Jenkins", text: "The water filtration system they installed changed our lives. No more sulfur smell!", rating: 5 },
-                { name: "David Thompson", text: "Professional, honest, and fair. They explained everything clearly. Highly recommend.", rating: 5 },
-                { name: "Linda Garcia", text: "40 years of experience really shows. They fixed a problem two other companies couldn't.", rating: 5 },
-                { name: "James Wilson", text: "Excellent communication and top-notch work. Best well service on the Gulf Coast.", rating: 5 },
+                { name: "Stephen McCraven", text: "Incredible service. Called this morning around 9 (Sunday) after our water well went out. They came out and had everything back up by lunch. Kept me informed on what they were doing, cleaned up, and made recommendations for future use. I'll recommend them to anyone having issues in the future.", rating: 5 },
+                { name: "Darick Thompson", text: "On last night after 10:00 PM I lost all water pressure and called Gulf Coast Well Works. Ray Cuevas immediately came out and was very professional and truthful about his diagnosis. He worked diligently until 3:00 AM to finish the job — just in time for my son to get ready for work. My wife and I truly thank him for his professionalism and fantastic work.", rating: 5 },
+                { name: "Jerry Scarborough", text: "Gulf Coast Well Works are an outstanding company that stand behind their work and their word. I would recommend them to anyone and everyone for all of your well work. They are very friendly and treat everyone like family.", rating: 5 },
+                { name: "Ginny Oell", text: "Fantastic service! They were the only people answering and willing to come out on a Sunday without an astronomical charge! They got us fixed right up and had water back very quickly! They also offered many maintenance tips to keep from having the same problem again. Very thankful and highly recommend!!!", rating: 5 },
                 // Duplicate for seamless loop
-                { name: "Robert Miller", text: "Fastest service I've ever had. My pump died on a Sunday and they were here in 2 hours.", rating: 5 },
-                { name: "Sarah Jenkins", text: "The water filtration system they installed changed our lives. No more sulfur smell!", rating: 5 },
-                { name: "David Thompson", text: "Professional, honest, and fair. They explained everything clearly. Highly recommend.", rating: 5 },
+                { name: "Stephen McCraven", text: "Incredible service. Called this morning around 9 (Sunday) after our water well went out. They came out and had everything back up by lunch. Kept me informed on what they were doing, cleaned up, and made recommendations for future use. I'll recommend them to anyone having issues in the future.", rating: 5 },
+                { name: "Darick Thompson", text: "On last night after 10:00 PM I lost all water pressure and called Gulf Coast Well Works. Ray Cuevas immediately came out and was very professional and truthful about his diagnosis. He worked diligently until 3:00 AM to finish the job — just in time for my son to get ready for work. My wife and I truly thank him for his professionalism and fantastic work.", rating: 5 },
+                { name: "Jerry Scarborough", text: "Gulf Coast Well Works are an outstanding company that stand behind their work and their word. I would recommend them to anyone and everyone for all of your well work. They are very friendly and treat everyone like family.", rating: 5 },
+                { name: "Ginny Oell", text: "Fantastic service! They were the only people answering and willing to come out on a Sunday without an astronomical charge! They got us fixed right up and had water back very quickly! They also offered many maintenance tips to keep from having the same problem again. Very thankful and highly recommend!!!", rating: 5 },
               ].map((review, i) => (
-                <Card key={i} className="min-w-[350px] p-8 border-none shadow-lg shadow-slate-200/50 bg-white rounded-3xl shrink-0">
+                <Card key={i} className="min-w-[380px] max-w-[380px] p-8 border-none shadow-lg shadow-slate-200/50 bg-white rounded-3xl shrink-0">
                   <div className="flex gap-1 mb-4">
                     {[...Array(review.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-brand-secondary text-brand-secondary" />
                     ))}
                   </div>
-                  <p className="text-slate-600 italic mb-6">"{review.text}"</p>
+                  <p className="text-slate-600 italic mb-6 leading-relaxed line-clamp-4">"{review.text}"</p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-brand-primary/10 rounded-full flex items-center justify-center text-brand-primary font-bold">
+                    <div className="w-10 h-10 bg-brand-primary/10 rounded-full flex items-center justify-center text-brand-primary font-bold flex-shrink-0">
                       {review.name[0]}
                     </div>
-                    <span className="font-bold text-brand-bg">{review.name}</span>
+                    <div>
+                      <span className="font-bold text-brand-bg block">{review.name}</span>
+                      <span className="text-xs text-slate-400">Google Review</span>
+                    </div>
                   </div>
                 </Card>
               ))}

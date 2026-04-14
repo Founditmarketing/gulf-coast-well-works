@@ -24,7 +24,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/gc logo.jpg" alt="Gulf Coast Well Works Logo" className="h-10 mix-blend-multiply" />
+          <img src="/gc-logo.png" alt="Gulf Coast Well Works Logo" className="h-12" />
           <div className="flex flex-col">
             <span className="font-heading font-bold text-brand-primary leading-tight text-lg uppercase">Gulf Coast</span>
             <span className="font-heading font-medium text-brand-bg leading-tight text-sm tracking-widest uppercase">Well Works</span>

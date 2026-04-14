@@ -31,7 +31,6 @@ export default function Emergency() {
   ];
 
   const guarantees = [
-    "Response within 2 hours — day or night",
     "Licensed & certified technicians on every call",
     "No hidden emergency fees — transparent pricing",
     "Servicing Gulfport, Lyman & surrounding areas",
@@ -40,7 +39,7 @@ export default function Emergency() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-red-900 text-white py-24 overflow-hidden">
+      <section className="relative bg-red-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img
             src="/gc1.jpg"
@@ -60,18 +59,15 @@ export default function Emergency() {
               <span className="w-2 h-2 bg-red-400 rounded-full animate-pulse" />
               <span className="text-sm font-semibold tracking-wide uppercase">24/7 Emergency Response</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold font-heading leading-[1.1] mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6">
               Well Emergency? <span className="text-red-300">We're On The Way.</span>
             </h1>
-            <p className="text-xl text-red-100 mb-10 max-w-2xl leading-relaxed">
+            <p className="text-xl text-red-100 leading-relaxed mb-8">
               Don't wait for your water supply to fail. Gulf Coast Well Works dispatches certified technicians around the clock — including nights, weekends, and holidays.
             </p>
             <a href="tel:228-265-2019">
-              <Button
-                size="lg"
-                className="bg-white text-red-900 hover:bg-red-100 font-bold text-xl px-10 h-16 shadow-2xl shadow-red-900/30 animate-pulse"
-              >
-                <Phone className="mr-3 w-6 h-6" />
+              <Button size="lg" className="bg-white text-red-900 hover:bg-red-100 font-bold shadow-xl">
+                <Phone className="mr-2 w-5 h-5" />
                 Call Now: 228-265-2019
               </Button>
             </a>

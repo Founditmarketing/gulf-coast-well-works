@@ -83,9 +83,11 @@ export function ServicePageLayout({ title, subtitle, description, image, feature
                   <h3 className="text-2xl font-bold font-heading mb-2">Need Emergency Assistance?</h3>
                   <p className="text-slate-300">Our team is available 24/7 for urgent well and pump repairs.</p>
                 </div>
-                <Button size="lg" className="bg-brand-secondary hover:bg-brand-secondary/90 text-white font-bold whitespace-nowrap">
-                  Contact Emergency Team
-                </Button>
+                <a href="tel:228-265-2019">
+                  <Button size="lg" className="bg-brand-secondary hover:bg-brand-secondary/90 text-white font-bold whitespace-nowrap">
+                    Contact Emergency Team
+                  </Button>
+                </a>
               </div>
             </div>
 
